@@ -16,4 +16,6 @@ EPON packet parser is a tool that parsing EPON protocol, written by QT 6.2.
 + Build and Run.
 ## Note
 You should copy qss files to debug/release directory.
+## Demo
+![Img](./demo.png)
 
