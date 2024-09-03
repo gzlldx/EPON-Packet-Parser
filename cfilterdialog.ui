@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CFilterDialog</class>
+ <widget class="QDialog" name="CFilterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="baseWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>471</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="btnAddFilter">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>40</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>增加条件</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClearAll">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>80</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清除所有</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>34</y>
+      <width>331</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>过滤器</string>
+    </property>
+    <widget class="QComboBox" name="cbKey">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbOper">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditValue">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>50</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTitles">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>标题栏</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelOper">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>操作符</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelThreshold">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>阈值</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QListWidget" name="lwAllFilters">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>154</y>
+      <width>331</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAllFilters">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>134</y>
+      <width>54</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>过滤条件</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>431</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Plain</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnApply">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>180</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>应用</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnOK">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>300</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCancel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTitleSettings">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>471</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>220</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cbKey</tabstop>
+  <tabstop>cbOper</tabstop>
+  <tabstop>lineEditValue</tabstop>
+  <tabstop>btnAddFilter</tabstop>
+  <tabstop>btnClearAll</tabstop>
+  <tabstop>btnApply</tabstop>
+  <tabstop>lwAllFilters</tabstop>
+  <tabstop>btnOK</tabstop>
+  <tabstop>btnCancel</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

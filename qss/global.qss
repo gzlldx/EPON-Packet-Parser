@@ -1,0 +1,66 @@
+QFrame#symbolFrame
+{
+    border-radius: 3px;
+    color: white;
+    background-color: #505050;
+}
+
+QToolBar
+{
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #707070;
+}
+
+QToolButton
+{
+    color: #e0e0e0;
+}
+
+QToolButton:hover
+{
+	margin: 1px;
+	margin-bottom: 2px;
+    border-radius: 3px;
+    background-color: #909090;
+}
+
+QToolButton:pressed
+{
+	padding-left: 2px;
+	padding-top:  2px;
+    background-color: #4060a0;
+}
+
+QCheckBox
+{
+    color: #e0e0e0;
+}
+
+/*
+QToolTip
+{
+    border: 1px solid darkkhaki;
+    padding: 2px;
+    border-radius: 3px;
+    opacity: 200;
+}
+*/
+
+QStatusBar {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+    background-color: #505050;
+    color: #e0e0e0;
+}
+
+QStatusBar::item {
+    color: white;
+}
+
+QStatusBar QLabel {
+	color: white;
+}
+
+
+

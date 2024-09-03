@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="panelWidget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QSplitter" name="updownSplitter">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <widget class="QSplitter" name="horzSplitter">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <widget class="QTableView" name="tableView"/>
+          <widget class="QSplitter" name="vertSplitter">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <widget class="QTreeView" name="treeView"/>
+           <widget class="CHexEditor" name="textEdit"/>
+          </widget>
+         </widget>
+         <widget class="QTextEdit" name="logTextEdit"/>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>972</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuCheck">
+    <property name="title">
+     <string>报文检查</string>
+    </property>
+    <addaction name="actionCheckGateOverlap"/>
+    <addaction name="actionResultWin"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actionFilter"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuCheck"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="myRes.qrc">
+     <normaloff>:/images/Open.png</normaloff>:/images/Open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionCheckGateOverlap">
+   <property name="icon">
+    <iconset resource="myRes.qrc">
+     <normaloff>:/images/Activity Monitor.png</normaloff>:/images/Activity Monitor.png</iconset>
+   </property>
+   <property name="text">
+    <string>授权重叠检查</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="icon">
+    <iconset resource="myRes.qrc">
+     <normaloff>:/images/Panel Settings.png</normaloff>:/images/Panel Settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>过滤器</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionResultWin">
+   <property name="text">
+    <string>显示结果窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CHexEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">chexeditor.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="myRes.qrc"/>
+ </resources>
+ <connections/>
+</ui>

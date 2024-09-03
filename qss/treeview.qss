@@ -1,0 +1,96 @@
+QHeaderView::section
+{ 
+	font: 9pt "Microsoft YaHei UI";
+    height: 21px;
+	color : white;
+	background-color: #705070;
+	/*qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #3030B0, stop:1 #a0a0f0);*/
+	/*padding-left : 10px;*/
+	/*border: 1px solid #c0c0c0;*/
+	border-top   : 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+    padding-left: 0px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+    
+}
+
+QHeaderView::section:horizontal:hover
+{
+	color: white;
+	background-color: #805080;
+}
+
+QHeaderView::section:horizontal:pressed
+{
+	color: white;
+	background: #4060a0;
+	padding-left: 1px;
+	padding-top: 1px;
+}
+
+QTreeView
+{
+	font: 9pt "Consolas";
+	border-radius: 3px;
+    background-color: #505050;
+    outline: none;				/* 去掉获得焦点时虚线框 */
+	/* alternate-background-color: yellow; 交替颜色 */
+    /* show-decoration-selected: 1;  设置整行颜色一致 */
+}
+
+QTreeView::item
+{
+	margin: 1px;
+	border-radius: 2px;
+    border: 1px solid transparent;
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+QTreeView::item:hover
+{
+	border-color: #909090;
+    background-color: #705070;
+}
+
+QTreeView::item:selected
+{
+	border-color: #909090;
+	color: #fed81f; /*#eab308; 佛手黄 */
+    background-color: #5357a0; /* #4060a0;   长春花蓝 */
+}
+
+QTreeView::branch
+{
+}
+
+QTreeView::branch:selected
+{
+	background-color: transparent;
+}
+
+/*
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(:/qss/tree-branch/vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(:/qss/tree-branch/branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(:/qss/tree-branch/branch-end.png) 0;
+}
+*/
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(":/images/branch-closed.png");
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(":/images/branch-open.png");
+}

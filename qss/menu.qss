@@ -1,0 +1,115 @@
+/* QMenuBar 配置开始 */
+QMenuBar {
+    /*background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 lightgray, stop:1 #707070);*/
+    background-color: #707070;
+    color: beige;
+    spacing: 10px;  /* 菜单间距 */
+    border-bottom: 1px solid #c0c0c0;
+}
+
+QMenuBar::item {
+    padding: 5px 6px;    /* 上 右 下 左*/
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-color: #705070; /*#a8a8a8;*/
+}
+
+QMenuBar::item:pressed {
+    font-weight:bold;
+    color: black;
+    padding: 2px 0px 0px 2px;    /* 上 右 下 左 */
+    background-color: #78b9ff; /*#4060a0;#888888;*/
+    border-color: #c0c0c0;
+}
+/* QMenuBar 配置结束 */
+
+/* QMenu 配置开始 */
+QMenu {
+    color: beige;
+    background-color: #505050;
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+}
+
+QMenu::item {
+    margin: 2px;
+    padding: 3px 25px 3px 8px; /* 上右下左*/
+    background-color: #505050;
+    border: 1px solid transparent;     /*预留1px边框 */
+    border-radius: 2px;
+}
+
+QMenu::item:selected {
+    color: white;
+    border-color: #a0a0a0;             /*选中时显示边框 */
+    background-color: #705070;         /* #654321;     褐色 */
+}
+
+QMenu::item::disabled {
+    color: #a0a0a0;
+    border-color: transparent;
+}
+
+QMenu::item::selected:disabled {
+    background-color: #707070;
+}
+
+/* 菜单子控件separator，定义菜单项之间的分隔线 */
+QMenu::separator {
+    height: 1px;
+    background-color: #a0a0a0;
+    margin-left : 2px; /* 距离菜单左边界2px */
+    margin-right: 2px; /* 距离菜单右边界2px */
+}
+
+/* 菜单项子控件indicator，定义菜单项在选中状态下的指示器 */
+QMenu::indicator {
+    width:  18px;
+    height: 18px;
+}
+
+/* 定义非独占checkBox状态 */
+QMenu::indicator:non-exclusive:unchecked {
+    image: url(:/qss/check/CheckBoxBlankYellow.png);
+}
+
+QMenu::indicator:non-exclusive:unchecked:selected {
+    image: url(:/qss/check/CheckBoxBlankWhite.png);
+}
+
+QMenu::indicator:non-exclusive:checked {
+    image: url(:/qss/check/CheckBoxCheckedYellow.png);
+}
+
+QMenu::indicator:non-exclusive:checked:selected {
+    image: url(:/qss/check/CheckBoxCheckedWhite.png);
+}
+
+/* 定义独占radioButton风格指示器状态 */
+QMenu::indicator:exclusive:unchecked {
+    image: none;
+}
+
+QMenu::indicator:exclusive:unchecked:selected {
+    image: none;
+}
+
+QMenu::indicator:exclusive:checked {
+    image: url(:/qss/check/CircleMediumYellow.png);
+}
+
+QMenu::indicator:exclusive:checked:selected {
+    image: url(:/qss/check/CircleMediumWhite.png);
+}
+
+/* 子菜单右箭头设置 */
+QMenu::right-arrow {
+}
+

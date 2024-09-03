@@ -1,0 +1,72 @@
+
+QHeaderView::section {
+    font: 9pt "Microsoft YaHei UI";
+    height: 21px;
+    background-color: #705070;
+    color: white;
+    padding-left: 0px;
+    border: 1px solid #c0c0c0;
+}
+
+QHeaderView::section:horizontal:hover {
+    color: white;
+    background-color: #905090;
+}
+
+QHeaderView::section:horizontal:pressed {
+    color: #fed81f; /* 佛手黄 */
+    background-color: #505090;
+}
+
+/*
+QHeaderView::up-arrow {
+    width: 12px;
+    height: 12px;
+    subcontrol-position: center right;
+    padding-right: 4px;
+    image: url(:/images/About.png);
+}
+
+QHeaderView::down-arrow {
+    width: 12px;
+    height: 12px;
+    subcontrol-position: center right;
+    padding-right: 4px;
+    image: url(:/images/About.png);
+}*/
+
+
+QTableView {
+    font: 9pt "consolas";
+    color: #e0e0e0;
+    background-color: #404040;
+    alternate-background-color: #4a4a4a; /* 交替颜色（需要设置tableview->setAlternatingRowColors(true)） */
+    gridline-color: transparent;         /* 表格线颜色 */
+    selection-color: #f0f0f0;            /* 选中前景色 */
+    selection-background-color:#5070a0;
+    outline: none;
+}
+
+QTableView:item {
+    padding: 0px;
+}
+
+QTableView:item:selected {
+    color: #f0f0f0;
+    background-color: #5070a0;
+}
+
+QTableView:item:hover {
+    color: #fed81f;
+    background-color: #6080d0;
+    border: 1px solid #c0c0c0;
+    border-radius:2px;
+}
+
+/*
+QTableView QTableCornerButton::section {background: white; }
+QTableView QTableCornerButton::section:hover {background: lightGray; }
+QTableView QTableCornerButton::section:pressed {background: darkGray; }
+QTableView QTableCornerButton::section:checked {background: black; }
+QTableView QTableCornerButton::section:checked:hover {background: red; }
+*/
