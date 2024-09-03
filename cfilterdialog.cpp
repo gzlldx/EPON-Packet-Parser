@@ -39,7 +39,6 @@ CFilterDialog::CFilterDialog(QWidget *parent) :
     ui->baseWidget->setStyleSheet(qssFile.readAll());
     ui->cbKey->setStyleSheet("");     // QT 6.2.4有bug，不得不给comboBox再设定一次空值样式表才起作用
     ui->cbOper->setStyleSheet("");
-    ui->comboBox->setStyleSheet("");
 
     qssFile.close();
 }
